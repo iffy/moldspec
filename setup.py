@@ -8,6 +8,7 @@ setup(
     version='0.1',
     packages=[
         'mold', 'mold.test',
+        'mold.schema', 'mold.schema.test',
         'mold.script', 'mold.script.test',
     ],
     install_requires=[

@@ -8,6 +8,7 @@ setup(
     version='0.1',
     packages=[
         'mold', 'mold.test',
+        'mold.script', 'mold.script.test',
     ],
     install_requires=[
         'Twisted>=10.2.0',

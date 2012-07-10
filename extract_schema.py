@@ -50,6 +50,7 @@ def main():
     from mold.schema.file import schema
     resource = 'file'
     dst = FilePath(options['destination'])
+    dst.makedirs()
     for doctype in doctypes:
         d = dst.child('%s.%s.rst' % (resource, doctype))
         template = templates[doctype]

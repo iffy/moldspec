@@ -35,6 +35,8 @@ class DictInspector:
         """
         try:
             inspector = self.mapping[params['kind']]
-        except KeyError, e:
+        except KeyError as e:
             return defer.fail(UnknownResource(params.get('kind', None)))
         return defer.maybeDeferred(inspector.inspect, params)
+
+

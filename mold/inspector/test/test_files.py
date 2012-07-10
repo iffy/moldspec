@@ -46,7 +46,7 @@ class InspectorTest(TestCase):
         root.makedirs()
         it = root.child('foo')
         it.setContent('foobar content')
-        it.chmod(0777)
+        it.chmod(0o777)
         
         # XXX this is a little WET
         stat_info = os.stat(it.path)
@@ -69,7 +69,7 @@ class InspectorTest(TestCase):
             self.assertEqual(result['sha'], sha1('foobar content').hexdigest())
             self.assertEqual(result['group'], group)
             self.assertEqual(result['user'], user)
-            self.assertEqual(result['permissions'], 0777)
+            self.assertEqual(result['permissions'], 0o777)
             
         return d.addCallback(check)
 

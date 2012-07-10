@@ -38,7 +38,7 @@ class Inspector:
         """
         try:
             jsonschema.validate(params, schema['inspection'])
-        except Exception, e:
+        except Exception as e:
             return defer.fail(e)
         
         path = params['name']
@@ -57,5 +57,5 @@ class Inspector:
             
             result['group'] = grp.getgrgid(stat_info.st_gid)[0]
             result['user'] = pwd.getpwuid(stat_info.st_uid)[0]
-            result['permissions'] = stat_info.st_mode & 0777
+            result['permissions'] = stat_info.st_mode & 0o777
         return defer.succeed(result)

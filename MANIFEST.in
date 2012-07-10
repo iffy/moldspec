@@ -1,1 +1,4 @@
 include README.md
+include Makefile
+include extract_schema.py
+recursive-include templates *

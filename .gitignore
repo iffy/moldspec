@@ -2,3 +2,5 @@
 _trial_temp
 build/
 docs/_build/
+dist/
+MANIFEST

@@ -36,10 +36,10 @@ class Inspector:
         except Exception, e:
             return defer.fail(e)
         
-        path = params['path']
+        path = params['name']
         result = {
             'kind': 'file',
-            'path': path,
+            'name': path,
         }
 
         result['exists'] = os.path.exists(path)

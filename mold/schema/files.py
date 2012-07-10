@@ -5,10 +5,10 @@ common = {
         'pattern': 'file',
         'description': 'Indicates that this is a file resource',
     },
-    'path': {
+    'name': {
         'type': 'string',
         'required': True,
-        'description': 'Absolute path name of file',
+        'description': 'Absolute path of file',
     },
 }
 obs_pre_common = {

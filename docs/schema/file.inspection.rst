@@ -9,10 +9,10 @@ file.inspection
     
     Indicates that this is a file resource
 
-``path`` **(required)**
+``name`` **(required)**
     ``string``
     
-    Absolute path name of file
+    Absolute path of file
 
 
 

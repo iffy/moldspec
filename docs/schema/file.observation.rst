@@ -16,12 +16,12 @@ file.observation
     
     Indicates that this is a file resource
 
-
-
-``path`` **(required)**
+``name`` **(required)**
     ``string``
     
-    Absolute path name of file
+    Absolute path of file
+
+
 
 
 
@@ -38,12 +38,12 @@ file.observation
 
 
 
+
+
 ``owner``
     ``string``
     
     Name of the user owning the file
-
-
 
 ``permissions``
     ``integer``

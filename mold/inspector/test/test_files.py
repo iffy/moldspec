@@ -26,13 +26,13 @@ class InspectorTest(TestCase):
         i = Inspector()
         d = i.inspect({
             'kind': 'file',
-            'path': root.child('foo').path,
+            'name': root.child('foo').path,
         })
         
         def check(result):
             validate(result, schema['observation'])
             self.assertEqual(result['kind'], 'file')
-            self.assertEqual(result['path'], root.child('foo').path)
+            self.assertEqual(result['name'], root.child('foo').path)
             self.assertEqual(result['exists'], False)
             
         return d.addCallback(check)
@@ -56,14 +56,14 @@ class InspectorTest(TestCase):
         i = Inspector()
         d = i.inspect({
             'kind': 'file',
-            'path': it.path,
+            'name': it.path,
         })
         
         def check(result):
             from hashlib import sha1
             validate(result, schema['observation'])
             self.assertEqual(result['kind'], 'file')
-            self.assertEqual(result['path'], root.child('foo').path)
+            self.assertEqual(result['name'], root.child('foo').path)
             self.assertEqual(result['exists'], True)
             self.assertEqual(result['size'], len('foobar content'))
             self.assertEqual(result['sha'], sha1('foobar content').hexdigest())

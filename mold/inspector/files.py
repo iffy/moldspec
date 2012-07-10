@@ -2,13 +2,16 @@
 File inspector
 """
 
+from zope.interface import implements
 from twisted.internet import defer
 from hashlib import sha1
+
 import os, os.path
 import grp
 import pwd
 import jsonschema
 
+from mold.interface import IInspector
 from mold.schema.files import schema
 
 
@@ -17,6 +20,8 @@ class Inspector:
     """
     I inspect the state of files.
     """
+    
+    implements(IInspector)
     
     
     def inspect(self, params):

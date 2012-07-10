@@ -9,6 +9,8 @@ Install Twisted then do:
 
 One goal of this project is to standardize configuration management.  There are a variety of tools that do things their own way, making the cost of switching or evaluating high.
 
+To that end, all of the major components define an API and are replaceable -- if you don't like the way a component is working, you can write your own.
+
 
 ## Conformer ##
 

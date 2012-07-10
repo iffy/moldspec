@@ -5,5 +5,8 @@ python:
   - "3.2"
   - "pypy"
 
-install: python setup.py install
+install:
+  - python setup.py install
+  - pip install Twisted jsonschema Jinja2 --use-mirrors
+
 script: trial mold

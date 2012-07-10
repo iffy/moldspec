@@ -47,10 +47,11 @@ def main():
     for doctype in doctypes:
         templates[doctype] = env.get_template(options['%s-template'%doctype])
     
-    from mold.schema.file import schema
+    from mold.schema.files import schema
     resource = 'file'
     dst = FilePath(options['destination'])
-    dst.makedirs()
+    if not dst.exists():
+        dst.makedirs()
     for doctype in doctypes:
         d = dst.child('%s.%s.rst' % (resource, doctype))
         template = templates[doctype]

@@ -1,0 +1,56 @@
+"""
+File inspector
+"""
+
+from twisted.internet import defer
+from hashlib import sha1
+import os, os.path
+import grp
+import pwd
+import jsonschema
+
+from mold.schema.files import schema
+
+
+
+class Inspector:
+    """
+    I inspect the state of files.
+    """
+    
+    
+    def inspect(self, params):
+        """
+        Inspect the state of the file.
+        
+        @param params: A dictionary conforming to
+            C{mold.schema.files.schema['inspection']}
+        
+        @rtype: Deferred
+        @return: The result of the inspection.  A dictionary conforming to
+            C{mold.schema.files.schema['observation']}.  Or an error if one
+            was encountered.
+        """
+        try:
+            jsonschema.validate(params, schema['inspection'])
+        except Exception, e:
+            return defer.fail(e)
+        
+        path = params['path']
+        result = {
+            'kind': 'file',
+            'path': path,
+        }
+
+        result['exists'] = os.path.exists(path)
+        if result['exists']:
+            stat_info = os.stat(path)
+            result['size'] = stat_info.st_size
+            
+            # XXX this will probably need to be optimized
+            result['sha'] = sha1(open(path, 'rb').read()).hexdigest()
+            
+            result['group'] = grp.getgrgid(stat_info.st_gid)[0]
+            result['user'] = pwd.getpwuid(stat_info.st_uid)[0]
+            result['permissions'] = stat_info.st_mode & 0777
+        return defer.succeed(result)

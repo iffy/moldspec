@@ -20,6 +20,13 @@ obs_pre_common = {
         'type': 'string',
         'description': "Name of the group owning the file",
     },
+    'permissions': {
+        'type': 'integer',
+        'description': ("Octal permission bits for the file, "
+                        "e.g. ``0755``.  Since it's a decimal"
+                        " you will need to convert to octal if you want it in"
+                        " that format."),
+    },
 }
 
 #------------------------------------------------------------------------------
@@ -40,7 +47,7 @@ observation = {
 }
 observation['properties'].update({
     'size': {
-        'type': 'integer',
+        'type': ['integer','long'],
         'description': 'Current file size in bytes',
     },
     'sha': {
@@ -50,6 +57,7 @@ observation['properties'].update({
     },
     'exists': {
         'type': 'boolean',
+        'required': True,
         'description': "``true`` if the file exists, ``false`` if it doesn't",
     }
 })
@@ -65,6 +73,7 @@ prescription = {
 prescription['properties'].update({
     'exists': {
         'type': 'boolean',
+        'required': True,
         'description': ("``true`` if the file should exist, ``false`` if it "
                         "should not exist"),
     }

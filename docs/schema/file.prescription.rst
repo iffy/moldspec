@@ -4,7 +4,10 @@ file.prescription
 
 
 
-
+``exists`` **(required)**
+    ``boolean``
+    
+    ``true`` if the file should exist, ``false`` if it should not exist
 
 
 
@@ -20,10 +23,9 @@ file.prescription
     
     Absolute path name of file
 
-``exists``
-    ``boolean``
-    
-    ``true`` if the file should exist, ``false`` if it should not exist
+
+
+
 
 ``group``
     ``string``
@@ -38,4 +40,9 @@ file.prescription
     Name of the user owning the file
 
 
+
+``permissions``
+    ``integer``
+    
+    Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format.
 

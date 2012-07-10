@@ -8,11 +8,13 @@ setup(
     version='0.1',
     packages=[
         'mold', 'mold.test',
+        'mold.inspector', 'mold.inspector.test',
         'mold.schema', 'mold.schema.test',
         'mold.script', 'mold.script.test',
     ],
     install_requires=[
         'Twisted>=10.2.0',
+        'jsonschema',
     ],
     scripts=[
         'bin/mold',

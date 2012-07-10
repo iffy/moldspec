@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/iffy/mold.png)](http://travis-ci.org/iffy/mold)
+
 # Running the tests #
 
 Install Twisted then do:

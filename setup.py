@@ -15,6 +15,7 @@ setup(
     install_requires=[
         'Twisted>=10.2.0',
         'jsonschema',
+        'Jinja2',
     ],
     scripts=[
         'bin/mold',

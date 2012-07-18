@@ -6,3 +6,4 @@ This and the linked documents, known collectively as the `Mold Standard`, define
 .. toctree::
     :maxdepth: 2
 
+    documents

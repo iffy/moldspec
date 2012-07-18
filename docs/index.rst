@@ -8,9 +8,9 @@ Welcome to mold's documentation!
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
    
-    standards/index
+    standard/index
     implementation/index
 
 
@@ -20,7 +20,7 @@ XXX Find a home for these:
     :maxdepth: 3
 
     actors
-    documents
+    design
     schema/index
 
 

@@ -1,9 +1,13 @@
 Mold Standard
 =============
 
-This and the linked documents, known collectively as the `Mold Standard`, define     a standard for configuration management systems.
+This and the linked documents, known collectively as the `Mold Standard`, define a standard for configuration management systems.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
 
+    design
+    actors
     documents
+    routines
+    schema/index

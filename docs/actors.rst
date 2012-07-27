@@ -73,6 +73,10 @@ For example, you might give it this prescription to ensure that the file at ``/t
     }
 
 
+Historian
+---------
+
+Collects logs...
 
 
 

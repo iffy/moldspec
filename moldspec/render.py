@@ -51,5 +51,7 @@ def main():
     })
     
     # resources
-    from moldspec.doc.resource import files
+    from moldspec.doc.resource import files, user
     renderResourceSchema('file', files.schema)
+    renderResourceSchema('user', user.schema)
+

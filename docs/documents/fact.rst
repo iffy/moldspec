@@ -3,7 +3,7 @@
 Fact Document
 =============
 
-Fact documents describe the (relatively) immutable characteristics of a system.
+Fact documents describe the (relatively) immutable characteristics of a system.  They are returned by :ref:`Fact Checkers <actor-fact-checker>`.
 
 
 Schema

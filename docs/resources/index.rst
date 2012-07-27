@@ -1,3 +1,5 @@
+.. _resources:
+
 Resources
 =========
 
@@ -5,3 +7,4 @@ Resources
     :maxdepth: 2
     
     file
+    user

@@ -3,7 +3,7 @@
 Prescription Document
 =====================
 
-Prescription documents describe the **desired** state of a resource.  Each resource type has its own schema for its Prescription documents.  You can see the complete list of resource-specific Prescription documents here XXX.
+Prescription documents describe the **desired** state of a resource.  Each resource type has its own schema for its Prescription documents.  Go to :ref:`resources` to see the complete list of resource-specific Prescription documents.
 
 These documents are given to a :ref:`actor-performer` which make the changes necessary to match the prescription.
 

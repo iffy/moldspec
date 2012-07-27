@@ -7,8 +7,7 @@ Actors
 Fact Checker
 ------------
 
-The Fact Checker is responsible for getting the facts about a system.  It produces an
-Gets the facts about a machine.
+The Fact Checker is responsible for getting the facts about a system.  It produces a :ref:`document-fact`.
 
 
 .. _actor-prescriber:

@@ -3,9 +3,9 @@
 Observation Document
 ====================
 
-Observation documents describe the **actual** state of a resource.  Each resource type has its own schema for its *Observation documents*.  You can see the complete list of resource-specific *Observation documents* here XXX.
+Observation documents describe the **actual** state of a resource.  Each resource type has its own schema for its *Observation documents*.  Go to :ref:`resources` to see the complete list of resource-specific Observation documents.
 
-They are returned as the result of inspections.
+:ref:`Inspectors <actor-inspector>` return Observation documents.
 
 For example, a ``file`` resource observation document might look like this:
 

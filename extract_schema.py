@@ -20,7 +20,7 @@ class Options(usage.Options):
     ]
 
     optParameters = [
-        ['destination', 'd', root.child('docs').child('standard').child('schema').path,
+        ['destination', 'd', root.child('docs').child('schema').path,
             "Directory in which to dump the rst files"],
         ['template-root', 't', root.child('templates').path,
             "Template directory to be used for rendering the files."],

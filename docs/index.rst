@@ -1,18 +1,17 @@
-Welcome to mold's documentation!
-================================
+Welcome to moldspec's documentation!
+====================================
 
-``mold`` is divided into two main components:
 
-    1. A standard for configuration management systems
-    2. An example implementation of the standard
-
+This and the linked documents, known collectively as the `Mold Standard`, define a standard for configuration management systems.
 
 .. toctree::
-    :maxdepth: 4
-   
-    standard/index
-    implementation/index
+    :maxdepth: 3
 
+    design
+    actors
+    documents
+    routines
+    schema/index
 
 Indices and tables
 ==================

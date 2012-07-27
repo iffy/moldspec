@@ -5,8 +5,8 @@
     {{ data.title + ' - ' if data.title }}{{ data.description }}
 {%- endmacro -%}
 
-{%- set title = '%s' % (doctype,) -%}
-{{ title|title }}
+{%- set title = resource + ' ' + doctype.title() + ' Schema' -%}
+{{ title }}
 {{'-' * title|length }}
 
 {% if schema.properties %}

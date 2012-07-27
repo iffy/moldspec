@@ -1,8 +1,35 @@
 Documents
 =========
 
-Identity
---------
+
+.. _document-fact:
+
+Fact Document
+-------------
+
+Fact documents describe the (relatively) immutable characteristics of a system.  These documents must conform to this schema:
+
+XXX include schema
+
+Here's an example fact document:
+
+.. code-block:: javascript
+
+    {
+        'os': {
+            'kind': 'linux',
+            'distro': 'ubuntu',
+            'version': '12.10',
+        },
+    }
+
+
+
+
+.. _document-identity:
+
+Identity Document
+-----------------
 
 Identity documents uniquely describe a resource.  All identity documents for all resources conform to this schema:
 
@@ -34,32 +61,14 @@ For example, the identity document for the ``/etc/hosts`` file looks like this:
     }
 
 
-Fact
-----
+.. _document-prescription:
 
-Fact documents describe the (relatively) immutable characteristics of a system.  These documents must conform to this schema:
+Prescription Document
+---------------------
 
-XXX include schema
+Prescription documents describe the **desired** state of a resource.  Each resource type has its own schema for its Prescription documents.  You can see the complete list of resource-specific Prescription documents here XXX.
 
-Here's an example fact document:
-
-.. code-block:: javascript
-
-    {
-        'os': {
-            'kind': 'linux',
-            'distro': 'ubuntu',
-            'version': '12.10',
-        },
-    }
-
-
-Prescription
-------------
-
-Prescription documents describe the **desired** state of a resource.  Each resource type has its own schema for its *Prescription documents*.  You can see the complete list of resource-specific *Prescription documents* here XXX.
-
-These documents are given to `Conformers`_ which make the changes necessary to match the prescription.
+These documents are given to a :ref:`actor-performer` which make the changes necessary to match the prescription.
 
 For example, if we want to make sure the file ``/tmp/foo`` does not exist, we could prescribe that with this document:
 
@@ -77,8 +86,10 @@ XXX include schema
 XXX The prescription is actually a list of Prescriptions.  Somehow, each one should be associated with which steps are a result of it and should be cast into buckets depending on step success/failure (note from notebook -- may overlap with steps document).
 
 
-Observation
------------
+.. _document-observation:
+
+Observation Document
+--------------------
 
 Observation documents describe the **actual** state of a resource.  Each resource type has its own schema for its *Observation documents*.  You can see the complete list of resource-specific *Observation documents* here XXX.
 
@@ -102,9 +113,10 @@ For example, a ``file`` resource observation document might look like this:
 
 XXX include schema
 
+.. _document-steps:
 
-Steps
------
+Steps Document
+--------------
 
 Steps documents contain the steps a Performer needs to follow to bring about the desired state.
 

@@ -1,23 +1,19 @@
 from distutils.core import setup
 
 setup(
-    url='https://github.com/iffy/mold',
+    url='https://github.com/iffy/moldspec',
     author='Matt Haggard',
     author_email='haggardii@gmail.com',
-    name='mold',
+    name='moldspec',
     version='0.1',
     packages=[
-        'mold', 'mold.test',
-        'mold.inspector', 'mold.inspector.test',
-        'mold.schema', 'mold.schema.test',
-        'mold.script', 'mold.script.test',
+        'moldspec', 'moldspec.test',
+        'moldspec.schema', 'moldspec.schema.test',
     ],
     install_requires=[
         'Twisted>=10.2.0',
         'jsonschema',
         'Jinja2',
     ],
-    scripts=[
-        'bin/mold',
-    ]
+    scripts=[]
 )

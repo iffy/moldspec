@@ -20,7 +20,7 @@ class Options(usage.Options):
     ]
 
     optParameters = [
-        ['destination', 'd', root.child('docs').child('schema').path,
+        ['destination', 'd', root.child('docs').child('resources').path,
             "Directory in which to dump the rst files"],
         ['template-root', 't', root.child('templates').path,
             "Template directory to be used for rendering the files."],
@@ -47,7 +47,7 @@ def main():
     for doctype in doctypes:
         templates[doctype] = env.get_template(options['%s-template'%doctype])
     
-    from moldspec.schema.files import schema
+    from moldspec.doc.files import schema
     resource = 'file'
     dst = FilePath(options['destination'])
     if not dst.exists():

@@ -8,7 +8,7 @@ setup(
     version='0.1',
     packages=[
         'moldspec', 'moldspec.test',
-        'moldspec.schema', 'moldspec.schema.test',
+        'moldspec.doc', 'moldspec.doc.test',
     ],
     install_requires=[
         'Twisted>=10.2.0',

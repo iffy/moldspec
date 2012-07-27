@@ -8,9 +8,9 @@ This and the linked documents, known collectively as the `Mold Standard`, define
 
     design
     actors
-    documents
+    documents/index
     routines
-    schema/index
+    resources/index
 
 Indices and tables
 ==================

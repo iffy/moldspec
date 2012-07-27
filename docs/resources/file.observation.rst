@@ -1,5 +1,5 @@
-file.prescription
------------------
+Observation
+-----------
 
 
 
@@ -7,7 +7,7 @@ file.prescription
 ``exists`` **(required)**
     ``boolean``
     
-    ``true`` if the file should exist, ``false`` if it should not exist
+    ``true`` if the file exists, ``false`` if it doesn't
 
 
 
@@ -20,6 +20,10 @@ file.prescription
     ``string``
     
     Absolute path of file
+
+
+
+
 
 
 
@@ -45,4 +49,14 @@ file.prescription
     ``integer``
     
     Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format.
+
+``sha``
+    ``string``
+    
+    SHA1 hash of the file's contents as a hexadecimal string
+
+``size``
+    ``['integer', 'long']``
+    
+    Current file size in bytes
 

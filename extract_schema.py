@@ -47,7 +47,7 @@ def main():
     for doctype in doctypes:
         templates[doctype] = env.get_template(options['%s-template'%doctype])
     
-    from moldspec.doc.files import schema
+    from moldspec.doc.resource.files import schema
     resource = 'file'
     dst = FilePath(options['destination'])
     if not dst.exists():

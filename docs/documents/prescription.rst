@@ -18,8 +18,6 @@ For example, if we want to make sure the file ``/tmp/foo`` does not exist, we co
     }
 
 
-XXX include schema
-
 XXX The prescription is actually a list of Prescriptions.  Somehow, each one should be associated with which steps are a result of it and should be cast into buckets depending on step success/failure (note from notebook -- may overlap with steps document).
 
 

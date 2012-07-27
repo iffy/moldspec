@@ -21,6 +21,3 @@ For example, a ``file`` resource observation document might look like this:
         "group": "bar",
         ...
     }
-
-
-XXX include schema

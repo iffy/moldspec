@@ -3,7 +3,7 @@
 Fact Document
 =============
 
-Fact documents describe the (relatively) immutable characteristics of a system.  These documents must conform to this schema:
+Fact documents describe the (relatively) immutable characteristics of a system.
 
 
 Schema

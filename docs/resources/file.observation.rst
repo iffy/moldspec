@@ -58,7 +58,7 @@
 ``permissions``
     ``integer``
     
-    Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format.
+    Octal permission bits for the file, e.g. ``0755``.  Since it's an integer you will need to convert to octal if you want it in that format.
 
 
 
@@ -116,7 +116,7 @@ JSON Schema:
             }, 
             "permissions": {
                 "type": "integer", 
-                "description": "Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format."
+                "description": "Octal permission bits for the file, e.g. ``0755``.  Since it's an integer you will need to convert to octal if you want it in that format."
             }, 
             "size": {
                 "type": [

@@ -4,6 +4,13 @@
 
 
 
+``content`` **(required)**
+    ``string``
+    
+    URI or local absolute path to the file
+
+
+
 ``exists`` **(required)**
     ``boolean``
     
@@ -24,6 +31,8 @@
     ``string``
     
     Absolute path of file
+
+
 
 
 
@@ -54,7 +63,7 @@
 ``permissions``
     ``integer``
     
-    Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format.
+    Octal permission bits for the file, e.g. ``0755``.  Since it's an integer you will need to convert to octal if you want it in that format.
 
 
 
@@ -68,6 +77,11 @@ JSON Schema:
     {
         "type": "object", 
         "properties": {
+            "content": {
+                "required": true, 
+                "type": "string", 
+                "description": "URI or local absolute path to the file"
+            }, 
             "kind": {
                 "pattern": "file", 
                 "required": true, 
@@ -94,7 +108,7 @@ JSON Schema:
             }, 
             "permissions": {
                 "type": "integer", 
-                "description": "Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format."
+                "description": "Octal permission bits for the file, e.g. ``0755``.  Since it's an integer you will need to convert to octal if you want it in that format."
             }
         }
     }

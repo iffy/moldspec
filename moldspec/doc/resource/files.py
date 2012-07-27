@@ -23,7 +23,7 @@ obs_pre_common = {
     'permissions': {
         'type': 'integer',
         'description': ("Octal permission bits for the file, "
-                        "e.g. ``0755``.  Since it's a decimal"
+                        "e.g. ``0755``.  Since it's an integer"
                         " you will need to convert to octal if you want it in"
                         " that format."),
     },
@@ -76,6 +76,11 @@ prescription['properties'].update({
         'required': True,
         'description': ("``true`` if the file should exist, ``false`` if it "
                         "should not exist"),
+    },
+    'content': {
+        'type': 'string',
+        'required': True,
+        'description': "URI or local absolute path to the file",
     }
 })
 prescription['properties'].update(obs_pre_common)

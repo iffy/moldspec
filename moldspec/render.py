@@ -16,6 +16,19 @@ def renderTo(dst, name, params):
     dst.setContent(render(name, params))
 
 
+def renderResourceSchema(name, schema):
+    schema_root = doc_root.child('resources')
+    doctypes = ['identity', 'observation', 'prescription']
+    
+    for doctype in doctypes:
+        doctype_schema = schema.get(doctype, None)
+        if not doctype_schema:
+            continue
+        renderTo(schema_root.child('%s.%s.rst' % (name,doctype)), 'schema.rst', {
+            'schema': doctype_schema,
+        })
+
+
 def main():
     # non-resources
     schema_root = doc_root.child('schema')
@@ -25,14 +38,5 @@ def main():
     })
     
     # resources
-    schema_root = doc_root.child('resources')
-    doctypes = ['identity', 'observation', 'prescription']
-    
-    from moldspec.doc.resource.files import schema
-    for doctype in doctypes:
-        doctype_schema = schema.get(doctype, None)
-        if not doctype_schema:
-            continue
-        renderTo(schema_root.child('file.%s.rst' % doctype), 'schema.rst', {
-            'schema': doctype_schema,
-        })
+    from moldspec.doc.resource import files
+    renderResourceSchema('file', files.schema)

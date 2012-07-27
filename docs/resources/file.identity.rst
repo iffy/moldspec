@@ -1,5 +1,5 @@
-file Identity Schema
---------------------
+
+
 
 
 
@@ -9,10 +9,14 @@ file Identity Schema
     
     Indicates that this is a file resource
 
+
+
 ``name`` **(required)**
     ``string``
     
     Absolute path of file
+
+
 
 
 

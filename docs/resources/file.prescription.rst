@@ -1,5 +1,5 @@
-file Prescription Schema
-------------------------
+
+
 
 
 
@@ -11,15 +11,21 @@ file Prescription Schema
 
 
 
+
+
 ``kind`` **(required)**
     ``string`` matching ``"file"``
     
     Indicates that this is a file resource
 
+
+
 ``name`` **(required)**
     ``string``
     
     Absolute path of file
+
+
 
 
 
@@ -36,13 +42,19 @@ file Prescription Schema
 
 
 
+
+
 ``owner``
     ``string``
     
     Name of the user owning the file
 
+
+
 ``permissions``
     ``integer``
     
     Octal permission bits for the file, e.g. ``0755``.  Since it's a decimal you will need to convert to octal if you want it in that format.
+
+
 

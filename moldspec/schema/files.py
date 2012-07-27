@@ -30,9 +30,9 @@ obs_pre_common = {
 }
 
 #------------------------------------------------------------------------------
-# inspection
+# identity
 #------------------------------------------------------------------------------
-inspection = {
+identity = {
     'type': 'object',
     'properties': common.copy(),
 }
@@ -83,7 +83,7 @@ prescription['properties'].update(obs_pre_common)
 
 #------------------------------------------------------------------------------
 schema = {
-    'inspection': inspection,
+    'identity': identity,
     'observation': observation,
     'prescription': prescription,
 }

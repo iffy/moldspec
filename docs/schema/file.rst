@@ -2,7 +2,7 @@
 ========
 
 
-.. include:: file.inspection.rst
+.. include:: file.identity.rst
 
 
 .. include:: file.observation.rst

@@ -8,5 +8,6 @@ help:
 
 # Generate the rst files from the json schema files
 
-predoc:
+doc:
 	python extract_schema.py
+	cd docs && make html

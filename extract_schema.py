@@ -24,9 +24,9 @@ class Options(usage.Options):
             "Directory in which to dump the rst files"],
         ['template-root', 't', root.child('templates').path,
             "Template directory to be used for rendering the files."],
-        ['inspection-template', None, 'inspection.rst',
+        ['identity-template', None, 'identity.rst',
             "Name of the template within `template-root` that will be used "
-            "to render Inspection schemas"],
+            "to render Identity document schemas"],
         ['observation-template', None, 'observation.rst',
             "Name of the template within `template-root` that will be used "
             "to render Observation schemas"],
@@ -42,7 +42,7 @@ def main():
     
     loader = FileSystemLoader(options['template-root'])
     env = Environment(loader=loader)
-    doctypes = ['inspection', 'observation', 'prescription']
+    doctypes = ['identity', 'observation', 'prescription']
     templates = {}
     for doctype in doctypes:
         templates[doctype] = env.get_template(options['%s-template'%doctype])

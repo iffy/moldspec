@@ -1,11 +1,27 @@
 Actors
 ======
 
+.. raw:: html
+
+    <table>
+        <tr>
+            <td><img src="_images/factchecker.png"></td>
+            <td><img src="_images/prescriber.png"></td>
+            <td><img src="_images/inspector.png"></td>
+            <td><img src="_images/choreographer.png"></td>
+            <td><img src="_images/performer.png"></td>
+            <td><img src="_images/historian.png"></td>
+        </tr>
+    </table>
+
 
 .. _actor-fact-checker:
 
 Fact Checker
 ------------
+
+.. image:: factchecker.png
+    :height: 100px
 
 The Fact Checker is responsible for getting the facts about a system.  It produces a :ref:`document-fact`.
 
@@ -15,6 +31,9 @@ The Fact Checker is responsible for getting the facts about a system.  It produc
 Prescriber
 ----------
 
+.. image:: prescriber.png
+    :height: 100px
+
 XXX to be defined
 
 
@@ -22,6 +41,10 @@ XXX to be defined
 
 Inspector
 ---------
+
+.. image:: inspector.png
+    :height: 100px
+    :align: left
 
 The Inspector inspects the current state of resources.
 
@@ -58,6 +81,9 @@ The inspector will return a document conforming to the :ref:`file-observation-sc
 Choreographer
 -------------
 
+.. image:: choreographer.png
+    :height: 100px
+
 Takes the facts, prescription, observed state and lays out the steps.
 
 
@@ -67,6 +93,10 @@ Takes the facts, prescription, observed state and lays out the steps.
 
 Performer
 ---------
+
+.. image:: performer.png
+    :height: 100px
+    :align: left
 
 The Performer makes necessary changes to a machine in order to conform to a prescribed state.
 
@@ -91,7 +121,10 @@ For example, you might give it this prescription to ensure that the file at ``/t
 Historian
 ---------
 
-Collects logs...
+.. image:: historian.png
+    :height: 100px
+
+Collects logs and things.
 
 
 
